@@ -182,40 +182,41 @@ button[type="submit"]:hover {
     background-color: #0056b3;
 }
 @media (max-width: 768px) {
-  /* Adjust Navbar for mobile */
+  /* Navbar takes the full screen width */
   .nav {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     padding: 10px 20px;
-    box-sizing: border-box; /* Ensures padding does not overflow */
+    box-sizing: border-box;
+    background-color: #f1f1f1; /* Change the background color to avoid empty space */
   }
 
   .nav-container {
     display: flex;
     justify-content: flex-start; /* Align logo to the left */
-    width: 100%;
+    width: auto;
   }
 
   .nav-container img {
-    height: 50px; /* Smaller logo */
+    height: 50px; /* Resize logo */
     margin-right: 10px;
   }
 
+  /* Adjust navbar links */
   .nav ul {
     display: flex;
     justify-content: space-between;
     padding: 0;
     margin: 0;
-    width: 100%; /* Ensures nav links span full width */
+    width: 100%; /* Full width for nav links */
     list-style: none;
   }
 
   .nav li {
-    margin: 0 10px; /* Adjusted margin for spacing */
-    font-size: 14px; /* Smaller font size */
+    margin: 0 10px;
+    font-size: 14px; /* Smaller font size to make sure they fit */
   }
 
   .nav a {
@@ -226,19 +227,24 @@ button[type="submit"]:hover {
     display: block;
   }
 
+  /* Make sure the text fits within the screen */
+  .nav a:hover {
+    background-color: rgb(122, 122, 122);
+  }
+
   /* Search Bar Adjustments */
   .searchbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 20px;
-    width: 90%; /* Wider to fit the screen better */
-    max-width: 650px;
-    margin-left: 50px; /* Shifts the search bar a bit left */
+    width: 90%; /* Make it wider to fit the screen */
+    max-width: 700px; /* Limit the maximum width */
+    margin-left: 10px; /* Shift slightly left */
   }
 
   .searchbar input {
-    width: 75%; /* Smaller input to fit well */
+    width: 80%; /* Make input longer */
     height: 40px;
     font-size: 16px;
     padding: 5px;
@@ -279,6 +285,7 @@ button[type="submit"]:hover {
     display: block;
   }
 }
+
 
 </style>
 
