@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="contact.css">
+    <script>
+        function showMessage(event) {
+            event.preventDefault(); // Prevent actual form submission
+            document.getElementById("confirmation").style.display = "block";
+            document.getElementById("contact-form").reset(); // Optional: reset form
+        }
+    </script>
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-container">
+            <img src="logo.png" alt="logo" style="float: left;">
+        </div>
+        <ul>
+            <li><a href="home page.html">Home</a></li>
+            <li><a href="about us.html">About Us</a></li>
+            <li><a href="contact us.html">Contact Us</a></li>
+            <li><a href="Loginpg.html">Log Out</a></li>
+        </ul>
+    </nav>
+
+    <div class="card">
+        <h1>Contact Us</h1>
+        <p>If you have any questions or suggestions, we’d love to hear from you!</p>
+
+        <form id="contact-form" onsubmit="showMessage(event)">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Send</button>
+        </form>
+
+        <div id="confirmation" style="display: none; margin-top: 20px; color: #90ee90;">
+            ✅ Your suggestion has been delivered!<br>
+            For any support queries, please contact us at: <strong>987-654-343</strong>
+        </div>
+    </div>
+</body>
+</html>
