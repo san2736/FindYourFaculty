@@ -181,65 +181,68 @@ button[type="submit"] {
 button[type="submit"]:hover {
     background-color: #0056b3;
 }
-@media (max-width: 768px) {
+@media (max-width: 600px) {
 
-  /* NAVIGATION */
-  .nav-container {
-    justify-content: center;
-    padding-left: 0;
+  /* ✅ Make navbar scrollable horizontally on phones */
+  nav ul {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: thin;
+    -ms-overflow-style: auto;
   }
 
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-    height: auto;
-    padding-left: 0;
+  nav ul::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  nav ul::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-radius: 4px;
   }
 
   nav li {
-    margin: 10px 0;
+    flex: 0 0 auto; /* prevent shrinking */
+    margin: 0 20px;
     font-size: large;
   }
 
+  /* ✅ Adjust logo for phone screens */
   .nav-container img {
-    height: 80px;
-    margin: 0 auto;
+    height: 70px;
+    margin-left: 10px;
   }
 
-  /* SEARCH BAR */
-  .searchbar {
-    justify-content: center;
-    margin: 20px;
-  }
-
-  .searchbar input {
-    width: 90%;
-    margin: 10px auto;
-  }
-
+  /* ✅ Fix search bar overflow on phones */
   .search-form {
     flex-direction: column;
     align-items: stretch;
     width: 100%;
+    padding: 0 10px;
+  }
+
+  .searchbar input {
+    width: 100%;
+    margin-left: 0;
   }
 
   button[type="submit"] {
-    width: 90%;
-    margin: 10px auto;
+    width: 100%;
   }
 
-  /* IMAGES */
+  .autocomplete-items {
+    width: 100%;
+  }
+
+  /* Optional: center FYF image and hide thinking girl image on phones */
   .girl_thinking img {
-    display: none; /* or resize if preferred */
+    display: none;
   }
 
   .fyf img {
     margin: 20px auto;
     display: block;
-    width: 90%;
-    height: auto;
-  }
-}
+    width
 
 
 </style>
