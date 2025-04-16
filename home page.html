@@ -236,11 +236,11 @@ li {
 }
 
 @media (max-width: 768px) {
-  /* Simplify navigation bar */
+  /* Navbar styling */
   .nav {
     background-color: transparent;
     display: flex;
-    justify-content: space-between; /* Ensure logo and nav items are spaced */
+    justify-content: space-between;
     align-items: center;
     padding: 10px 15px;
     box-shadow: none;
@@ -249,27 +249,24 @@ li {
 
   /* Logo styling */
   .nav-container img {
-    height: 40px; /* Reduce size of logo */
-    width: auto; /* Maintain aspect ratio */
+    height: 50px; /* Keep the logo as it was previously */
+    width: auto;
     margin: 0;
     display: block;
-    margin-left: auto;
-    margin-right: auto; /* Center align logo */
   }
 
-  /* Navbar text */
+  /* Navbar text (Make sure all four items are visible) */
   ul {
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
     padding: 0;
     margin: 0;
-    justify-content: space-evenly; /* Distribute menu items evenly */
-    width: 60%; /* Limit width of navbar text for better alignment */
+    width: 60%;
   }
 
   li {
-    font-size: 14px; /* Smaller text size */
-    margin: 0 5px; /* Less margin to fit the items properly */
+    font-size: 14px; /* Make text smaller for mobile */
+    margin: 0 5px;
   }
 
   li a {
@@ -277,24 +274,32 @@ li {
     padding: 8px;
     color: black;
     text-decoration: none;
-    background-color: transparent;
     font-size: 14px;
     text-align: center;
   }
 
   li a:hover {
     background-color: transparent;
-    color: #007BFF; /* Highlight color on hover */
+    color: #007BFF;
   }
 
-  /* Adjust Find Your Faculty image and search bar */
-  .fyf-image {
-    margin-top: 10px;
-    margin-bottom: 10px; /* Reduce space between images */
-    width: 100%;
+  /* Adjust the image sizes and positioning */
+  .girl-thinking-image, .fyf-image {
+    width: 90%; /* Adjust size to fit */
     height: auto;
+    margin: 10px auto; /* Center-align images */
   }
 
+  /* Reduce space between images */
+  .girl-thinking-image {
+    margin-bottom: 5px; /* Reduce space between images */
+  }
+
+  .fyf-image {
+    margin-top: 5px;
+  }
+
+  /* Search bar and button adjustments */
   .searchbar {
     margin-top: 10px;
     padding: 0 15px;
@@ -305,7 +310,7 @@ li {
   }
 
   .searchbar input {
-    width: 90%; /* Make the search bar fit */
+    width: 90%;
     height: 40px;
     font-size: 14px;
     margin-bottom: 10px;
