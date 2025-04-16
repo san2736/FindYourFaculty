@@ -77,25 +77,27 @@ body{
 }
 
 @media (max-width: 768px) {
-    /* Logo */
-    .nav-container img {
-        height: 50px;
-        margin-right: 10px;
+    /* Prevent horizontal scroll issues */
+    body, html {
+        overflow-x: hidden;
     }
 
-    /* Nav bar */
+    /* Nav bar fix */
     .nav {
+        width: 100%;
         overflow-x: auto;
         white-space: nowrap;
+        margin: 0;
+        padding: 0;
     }
 
     .nav ul {
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
-        overflow-x: auto;
         padding: 0;
         margin: 0;
+        width: max-content;
     }
 
     .nav li {
@@ -107,6 +109,12 @@ body{
     .nav a {
         font-size: large;
         padding: 10px;
+    }
+
+    /* Logo */
+    .nav-container img {
+        height: 50px;
+        margin-right: 10px;
     }
 
     /* Girl thinking image */
@@ -125,7 +133,7 @@ body{
         width: auto;
     }
 
-    /* Search bar */
+    /* Search bar layout */
     .searchbar {
         width: 95%;
         margin: 20px auto;
@@ -137,14 +145,14 @@ body{
     }
 
     .searchbar input {
-        width: 75%;
+        width: 80%;
         height: 40px;
         font-size: 16px;
         padding: 5px 10px;
     }
 
     .search-form button {
-        width: 20%;
+        width: 18%;
         height: 40px;
         font-size: 16px;
         margin-left: 5px;
@@ -152,8 +160,9 @@ body{
 
     .autocomplete-items {
         position: absolute;
-        width: 75%;
-        left: 12.5%;
+        width: 80%;
+        left: 10%;
         z-index: 99;
     }
 }
+
