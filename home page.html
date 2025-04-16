@@ -183,17 +183,11 @@ button[type="submit"]:hover {
 }
 @media screen and (max-width: 768px) {
 
-    @media screen and (max-width: 768px) {
-
     .nav {
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
         padding: 0 10px;
-    }
-
-    .nav-container {
-        padding: 0;
     }
 
     .nav-container img {
@@ -206,30 +200,28 @@ button[type="submit"]:hover {
         flex-direction: row;
         justify-content: flex-end;
         align-items: center;
-        flex-wrap: nowrap; /* 🔥 This keeps items in one line */
-        overflow-x: auto;   /* 🔥 Allows scrolling if too tight */
-        white-space: nowrap;
-        margin: 0;
-        padding: 0;
+        flex-wrap: nowrap;
         list-style: none;
+        padding: 0;
+        margin: 0;
         background-color: rgb(179, 179, 179);
         width: 100%;
         height: 60px;
     }
 
     .nav li {
-        margin: 0 8px;
-        font-size: 14px;
+        margin: 0 5px;
+        font-size: 12px; /* 📉 Smaller font */
         flex: 0 0 auto;
     }
 
     .nav a {
-        padding: 0 10px;
-        font-size: 14px;
+        padding: 0 5px;
+        font-size: 12px; /* 📉 Smaller font */
         line-height: 60px;
         display: inline-block;
     }
-}
+
 
 
     /* GIRL IMAGE */
