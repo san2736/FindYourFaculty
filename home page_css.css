@@ -75,132 +75,164 @@ body{
   font-size: large;
   font-family: 'Times New Roman', Times, serif;
 }
+body {
+  margin: 0;
+  background-image: url("mpstme dark bg.jpeg");
+  opacity: 1;
+}
+
+/* Navbar styling */
+.nav {
+  display: flex;
+  justify-content: space-between; /* Align logo to the left and menu to the right */
+  padding: 10px 20px; /* Added padding to make sure there's space */
+  background-color: rgb(179, 179, 179);
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+}
+
+.nav-container img {
+  height: 50px; /* Adjust logo size */
+  width: auto;
+}
+
+ul {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  padding: 0 15px;
+  display: inline-block;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+  line-height: 50px; /* Adjusted to match the height */
+}
+
+a:hover {
+  background-color: rgb(122, 122, 122);
+}
+
+li {
+  font-size: large;
+  margin: 0 10px;
+}
+
 @media (max-width: 768px) {
-  body {
-    margin: 0;
-    background-image: url("mpstme dark bg.jpeg");
-    opacity: 1;
-  }
-
-  /* Navbar styling */
   .nav {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-  }
-
-  .nav-container {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-  }
-
-  .nav-container img {
-    height: 80px; /* Reduced size for smaller screens */
-    width: auto;
+    flex-direction: column; /* Stack the items vertically on smaller screens */
+    align-items: flex-start;
   }
 
   ul {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    list-style-type: none;
-    background-color: rgb(179, 179, 179);
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around; /* Center the items */
-    align-items: center;
-    height: 70px; /* Reduced height */
+    flex-direction: column;
+    width: 100%; /* Full width for links on small screens */
   }
 
   li {
-    font-size: large;
-    margin: 0 15px;
+    margin: 5px 0; /* Reduced margin for mobile */
+    width: 100%; /* Ensure each list item takes full width */
   }
+}
 
-  a {
-    color: black;
-    text-decoration: none;
-    padding: 0 15px;
-    display: inline-block;
-    text-align: center;
-    line-height: 70px; /* Adjusted for smaller navbar height */
-  }
+/* Styling for "find your faculty" section */
+.girl_thinking img {
+  height: 250px; /* Smaller image for mobile */
+  margin-top: 50px;
+  margin-right: 0;
+  width: 100%; /* Ensure image takes up full width */
+}
 
-  a:hover {
-    background-color: rgb(122, 122, 122);
-  }
+.fyf img {
+  margin-top: 100px;
+  height: 150px;
+  width: 100%; /* Adjust size */
+  margin-left: 0;
+}
 
-  /* Image adjustments */
-  .girl_thinking img {
-    height: 300px; /* Reduced height for mobile view */
-    margin-top: 20px;
-    margin-right: 30px;
+.searchbar {
+  margin-top: 20px;
+  width: 100%; /* Full width */
+  display: flex;
+  justify-content: center;
+}
+
+.searchbar input {
+  width: 80%; /* Adjust width for better fit */
+  height: 40px;
+  border: 3px solid rgb(0, 17, 115);
+  border-radius: 10px;
+  padding: 5px;
+  font-size: large;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+button[type="submit"] {
+  padding: 8px 16px;
+  font-size: 16px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Adjust autocomplete suggestions */
+.autocomplete-items {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  border: 1px solid #ccc;
+  max-height: 150px;
+  overflow-y: auto;
+  background-color: white;
+  z-index: 1000;
+  width: 100%;
+}
+
+.autocomplete-items div {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.autocomplete-items div:hover {
+  background-color: #f0f0f0;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .searchbar input {
+    width: 85%; /* More compact input field */
   }
 
   .fyf img {
-    margin-top: 200px;
-    height: 150px; /* Adjusted image size */
-    margin-left: 30px;
+    height: 120px;
   }
 
-  /* Search bar adjustments */
-  .searchbar {
-    padding: 10px;
+  .girl_thinking img {
+    height: 200px;
     margin-top: 20px;
-    width: 100%;
-  }
-
-  .search-form {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-  }
-
-  .searchbar input {
-    width: 70%;
-    padding: 8px;
-    font-size: large;
-    font-family: 'Times New Roman', Times, serif;
-    border: 3px solid rgb(0, 17, 115);
-    border-radius: 10px;
-  }
-
-  button[type="submit"] {
-    padding: 8px 16px;
-    font-size: 14px; /* Adjusted size for mobile */
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-
-  button[type="submit"]:hover {
-    background-color: #0056b3;
-  }
-
-  /* Autocomplete box adjustments */
-  .autocomplete-items {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    border: 1px solid #ccc;
-    max-height: 150px;
-    overflow-y: auto;
-    background-color: white;
-    z-index: 1000;
-    width: 70%; /* Adjust width */
-  }
-
-  .autocomplete-items div {
-    padding: 8px;
-    cursor: pointer;
-  }
-
-  .autocomplete-items div:hover {
-    background-color: #f0f0f0;
   }
 }
