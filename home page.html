@@ -182,13 +182,15 @@ button[type="submit"]:hover {
     background-color: #0056b3;
 }
 @media (max-width: 768px) {
-  /* Fix Navbar for mobile - make sure all items fit in one row */
+  /* Adjust Navbar for mobile */
   .nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
     padding: 10px 20px;
+    box-sizing: border-box; /* Ensures padding does not overflow */
   }
 
   .nav-container {
@@ -204,37 +206,39 @@ button[type="submit"]:hover {
 
   .nav ul {
     display: flex;
-    width: 100%;
+    justify-content: space-between;
     padding: 0;
     margin: 0;
-    justify-content: space-evenly; /* Evenly distribute navbar items */
+    width: 100%; /* Ensures nav links span full width */
+    list-style: none;
   }
 
   .nav li {
-    margin: 0 5px;
+    margin: 0 10px; /* Adjusted margin for spacing */
+    font-size: 14px; /* Smaller font size */
   }
 
   .nav a {
     line-height: 50px;
-    font-size: 14px; /* Smaller font size */
-    padding: 10px;
+    font-size: 14px;
+    padding: 10px 12px;
     text-align: center;
     display: block;
   }
 
-  /* Search bar */
+  /* Search Bar Adjustments */
   .searchbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 20px;
-    width: 100%;
-    max-width: 650px; /* Limit max width */
-    margin-left: 75px;
+    width: 90%; /* Wider to fit the screen better */
+    max-width: 650px;
+    margin-left: 50px; /* Shifts the search bar a bit left */
   }
 
   .searchbar input {
-    width: 75%; /* Reduced width for mobile */
+    width: 75%; /* Smaller input to fit well */
     height: 40px;
     font-size: 16px;
     padding: 5px;
@@ -276,7 +280,6 @@ button[type="submit"]:hover {
   }
 }
 
-    
 </style>
 
 </body>
