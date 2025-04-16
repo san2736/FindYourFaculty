@@ -187,42 +187,30 @@ button[type="submit"]:hover {
     background-size: cover;
     background-position: center;
   }
-
   .nav {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .nav-container {
-    justify-content: center;
-    padding-left: 0;
-    margin-bottom: 10px;
-  }
-
-  .nav-container img {
-    height: 80px;
-    margin: 0 auto;
+    overflow-x: auto;
+    white-space: nowrap;
+    background-color: rgba(255, 255, 255, 0.95); /* Light background for contrast */
   }
 
   .nav ul {
-    flex-direction: row; /* Keep navbar horizontal */
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-wrap: nowrap;
     padding-left: 0;
-    height: auto;
   }
 
   .nav li {
-    margin: 5px 20px;
+    flex: 0 0 auto;
     font-size: large;
-    height: auto;
-    line-height: normal;
+    margin: 0 20px;
   }
 
-  .nav a {
-    padding: 10px;
-    line-height: normal;
+  .nav li a {
+    color: black !important; /* Override any hidden/dark colors */
+    display: inline-block;
+    padding: 15px 10px;
+    text-decoration: none;
   }
+}
 
   .girl_thinking img {
     height: 250px;
