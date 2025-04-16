@@ -236,6 +236,15 @@ li {
 }
 
 @media (max-width: 768px) {
+  /* Remove background from logo */
+  .nav-container img {
+    height: 50px; /* Keep the logo size consistent */
+    width: auto;
+    margin: 0;
+    display: block;
+    background-color: transparent; /* Ensure the background is transparent */
+  }
+
   /* Navbar styling */
   .nav {
     background-color: transparent;
@@ -245,27 +254,20 @@ li {
     padding: 10px 15px;
     box-shadow: none;
     width: 100%;
+    margin-top: 10px;
   }
 
-  /* Logo styling */
-  .nav-container img {
-    height: 50px; /* Keep the logo as it was previously */
-    width: auto;
-    margin: 0;
-    display: block;
-  }
-
-  /* Navbar text (Make sure all four items are visible) */
+  /* Navbar links */
   ul {
     display: flex;
     justify-content: space-between;
     padding: 0;
     margin: 0;
-    width: 60%;
+    width: 100%;
   }
 
   li {
-    font-size: 14px; /* Make text smaller for mobile */
+    font-size: 14px; /* Adjust text size for mobile */
     margin: 0 5px;
   }
 
@@ -283,25 +285,23 @@ li {
     color: #007BFF;
   }
 
-  /* Adjust the image sizes and positioning */
-  .girl-thinking-image, .fyf-image {
-    width: 90%; /* Adjust size to fit */
-    height: auto;
-    margin: 10px auto; /* Center-align images */
-  }
-
-  /* Reduce space between images */
+  /* Girl thinking image */
   .girl-thinking-image {
-    margin-bottom: 5px; /* Reduce space between images */
+    width: 90%; /* Reduce size to fit mobile */
+    height: auto;
+    margin: 15px auto; /* Center and add margin */
   }
 
+  /* FYF Image */
   .fyf-image {
-    margin-top: 5px;
+    width: 90%; /* Reduce size to fit mobile */
+    height: auto;
+    margin: 15px auto; /* Center and add margin */
   }
 
-  /* Search bar and button adjustments */
+  /* Search bar styling */
   .searchbar {
-    margin-top: 10px;
+    margin-top: 15px;
     padding: 0 15px;
     display: flex;
     flex-direction: column;
@@ -317,6 +317,7 @@ li {
     border-radius: 5px;
   }
 
+  /* Search button styling */
   .searchbar button {
     width: 90%;
     padding: 10px;
