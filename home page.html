@@ -182,90 +182,101 @@ button[type="submit"]:hover {
     background-color: #0056b3;
 }
 @media (max-width: 768px) {
-  /* NAVBAR FIX */
+  /* Adjust Navbar for mobile */
   .nav {
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
+    width: 100%;
+    padding: 10px 0;
+    font-size: large;
   }
 
   .nav-container {
     width: 100%;
     display: flex;
-    justify-content: center;
-    padding: 10px 0;
+    justify-content: flex-start; /* Align the logo on the left */
+    padding: 10px 20px;
   }
 
   .nav-container img {
-    height: 60px;
-    margin: 0 auto;
-    display: block;
+    height: 50px; /* Smaller logo for mobile */
+    margin-right: 10px;
   }
 
   .nav ul {
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    width: auto;
+    padding-left: 0;
     margin: 0;
   }
 
   .nav li {
-    margin: 10px 15px;
-    float: none;
+    margin: 0 10px;
     font-size: large;
   }
 
   .nav a {
-    line-height: normal;
-    font-size: 18px;
-    padding: 8px 12px;
+    line-height: 50px;
+    font-size: 14px; /* Smaller font size */
+    padding: 10px 15px;
   }
 
-  /* Search bar: KEEP SAME AS DESKTOP */
+  /* Make the search bar and button fit in one horizontal line */
   .searchbar {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: flex-start;
     margin-left: 75px;
     margin-top: 20px;
+    width: 100%;
+    max-width: 650px; /* Limit width on mobile */
   }
 
   .searchbar input {
-    width: 700px;
-    height: 20px;
+    width: 75%; /* Make the input smaller */
+    height: 40px;
     font-size: large;
-    margin-left: 0;
+    padding: 5px;
+    border-radius: 10px;
+    border: 3px solid rgb(0, 17, 115);
   }
 
   .search-form {
-    flex-direction: row;
-    gap: 10px;
-    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
     align-items: center;
   }
 
   button[type="submit"] {
     padding: 8px 16px;
     font-size: 16px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
     white-space: nowrap;
+    height: 40px;
   }
 
-  /* Girl + FYF image adjustments */
+  /* Image adjustments for mobile */
   .girl_thinking img {
-    height: 250px;
-    margin: 20px auto;
+    height: 200px;
+    margin: 30px auto 0;
     display: block;
   }
 
   .fyf img {
     height: 120px;
-    margin: 20px auto;
+    margin: 30px auto;
     display: block;
   }
 }
+
 
     
 </style>
