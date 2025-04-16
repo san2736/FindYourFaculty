@@ -236,114 +236,67 @@ li {
 }
 
 @media (max-width: 768px) {
+  /* Navbar layout and font size */
   .nav {
-    flex-direction: column; /* Stack the items vertically on smaller screens */
+    flex-direction: column;
     align-items: flex-start;
+    padding: 10px 15px;
   }
 
   ul {
     flex-direction: column;
-    width: 100%; /* Full width for links on small screens */
+    width: 100%;
+    padding-left: 0;
   }
 
   li {
-    margin: 5px 0; /* Reduced margin for mobile */
-    width: 100%; /* Ensure each list item takes full width */
+    font-size: 12px;
+    margin: 5px 0;
+    width: 100%;
   }
-}
 
-/* Styling for "find your faculty" section */
-.girl_thinking img {
-  height: 250px; /* Smaller image for mobile */
-  margin-top: 50px;
-  margin-right: 0;
-  width: 100%; /* Ensure image takes up full width */
-}
+  li a {
+    font-size: 12px;
+    line-height: 1.5;
+    padding: 5px 10px;
+    display: block;
+    width: 100%;
+  }
 
-.fyf img {
-  margin-top: 100px;
-  height: 150px;
-  width: 100%; /* Adjust size */
-  margin-left: 0;
-}
-
-.searchbar {
-  margin-top: 20px;
-  width: 100%; /* Full width */
-  display: flex;
-  justify-content: center;
-}
-
-.searchbar input {
-  width: 80%; /* Adjust width for better fit */
-  height: 40px;
-  border: 3px solid rgb(0, 17, 115);
-  border-radius: 10px;
-  padding: 5px;
-  font-size: large;
-  font-family: 'Times New Roman', Times, serif;
-}
-
-button[type="submit"] {
-  padding: 8px 16px;
-  font-size: 16px;
-  background-color: #007BFF;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  white-space: nowrap;
-}
-
-button[type="submit"]:hover {
-  background-color: #0056b3;
-}
-
-/* Adjust autocomplete suggestions */
-.autocomplete-items {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  border: 1px solid #ccc;
-  max-height: 150px;
-  overflow-y: auto;
-  background-color: white;
-  z-index: 1000;
-  width: 100%;
-}
-
-.autocomplete-items div {
-  padding: 8px;
-  cursor: pointer;
-}
-
-.autocomplete-items div:hover {
-  background-color: #f0f0f0;
-}
-
-.search-form {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  position: relative;
-}
-
-@media (max-width: 768px) {
-  .searchbar input {
-    width: 85%; /* More compact input field */
+  /* Reduce space between girl thinking image and FYF image */
+  .girl_thinking img {
+    height: 160px;
+    margin-top: 10px;
+    width: 100%;
   }
 
   .fyf img {
-    height: 120px;
+    height: 100px;
+    margin-top: 10px;
+    width: 100%;
   }
 
-  .girl_thinking img {
-    height: 200px;
-    margin-top: 20px;
+  /* Make search bar and button fit without scrolling */
+  .searchbar {
+    margin-top: 10px;
+    padding: 0 10px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .searchbar input {
+    width: 100%;
+    height: 40px;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .searchbar button {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
   }
 }
-
 
 </style>
 
