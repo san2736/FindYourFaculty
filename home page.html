@@ -182,78 +182,60 @@ button[type="submit"]:hover {
     background-color: #0056b3;
 }
 @media screen and (max-width: 768px) {
-
-  body {
-    background-size: cover;
-    background-position: center;
-  }
-
-  nav {
-    overflow-x: auto;
+  .nav {
+    overflow-x: auto; /* Enables horizontal scroll */
     white-space: nowrap;
-    background-color: rgba(255, 255, 255, 0.95); /* Light background for contrast */
+    background-color: rgba(255, 255, 255, 0.9); /* Light background to make text visible */
   }
 
   .nav ul {
-    flex-wrap: nowrap;
+    flex-wrap: nowrap; /* Prevent items from wrapping */
     padding-left: 0;
+    height: auto;
   }
 
   .nav li {
-    flex: 0 0 auto;
     font-size: large;
-    margin: 0 20px;
+    margin: 0 30px; /* Smaller margin for mobile */
+    height: auto;
+    line-height: normal;
   }
 
-  .nav li a {
-    color: black !important; /* Override any hidden/dark colors */
-    display: inline-block;
+  .nav a {
+    line-height: normal;
     padding: 15px 10px;
-    text-decoration: none;
-  }
-
-  .girl_thinking img {
-    height: 250px;
-    margin: 30px auto;
     display: block;
-    float: none;
+    color: black; /* Ensures visibility */
   }
 
+  .nav-container img {
+    height: 60px; /* Resize logo */
+    margin-left: 10px;
+  }
+
+  .girl_thinking img,
   .fyf img {
-    height: 120px;
+    max-width: 100%;
+    height: auto;
     margin: 20px auto;
     display: block;
-    float: none;
   }
 
   .searchbar {
     flex-direction: column;
-    align-items: center;
-    margin-top: 30px;
+    align-items: flex-start;
+    padding: 0 10px;
   }
 
   .searchbar input {
-    width: 80%;
-    margin-left: 0;
-  }
-
-  .search-form {
-    flex-direction: column;
-    gap: 15px;
     width: 100%;
-    align-items: center;
   }
 
   button[type="submit"] {
-    width: auto;
-  }
-
-  .autocomplete-items {
-    width: 80%;
-    max-height: 150px;
+    width: 100%;
+    margin-top: 10px;
   }
 }
-
 
 
 </style>
