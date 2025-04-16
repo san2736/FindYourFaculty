@@ -181,6 +181,74 @@ button[type="submit"] {
 button[type="submit"]:hover {
     background-color: #0056b3;
 }
+@media (max-width: 768px) {
+  /* Navbar adjustments */
+  .nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-container {
+    justify-content: center;
+  }
+
+  .nav-container img {
+    height: 60px; /* Smaller logo on mobile */
+    margin: 10px 0;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    padding-left: 0;
+    height: auto;
+    width: 100%;
+    background-color: #b3b3b3;
+  }
+
+  .nav li {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .nav a {
+    line-height: 50px;
+    font-size: large;
+  }
+
+  /* Girl image and FYF text image */
+  .girl_thinking img {
+    height: 250px;
+    margin: 20px auto;
+    display: block;
+  }
+
+  .fyf img {
+    height: 120px;
+    margin: 20px auto;
+    display: block;
+  }
+
+  /* Search bar responsiveness */
+  .searchbar {
+    justify-content: center;
+    margin: 20px 0;
+  }
+
+  .searchbar input {
+    width: 90%;
+    max-width: 400px;
+    font-size: 16px;
+  }
+
+  .search-form {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  button[type="submit"] {
+    width: 80%;
+  }
+}
 
 
 </style>
