@@ -202,18 +202,17 @@ button[type="submit"]:hover {
   }
 
   nav li {
-    flex: 0 0 auto; /* prevent shrinking */
+    flex: 0 0 auto;
     margin: 0 20px;
     font-size: large;
   }
 
-  /* ✅ Adjust logo for phone screens */
   .nav-container img {
     height: 70px;
     margin-left: 10px;
   }
 
-  /* ✅ Fix search bar overflow on phones */
+  /* ✅ Search bar adjustments for small screens */
   .search-form {
     flex-direction: column;
     align-items: stretch;
@@ -234,16 +233,22 @@ button[type="submit"]:hover {
     width: 100%;
   }
 
-  /* Optional: center FYF image and hide thinking girl image on phones */
+  /* ✅ Keep girl image visible but adjust layout */
   .girl_thinking img {
-    display: none;
+    height: auto;
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+    display: block;
   }
 
   .fyf img {
     margin: 20px auto;
     display: block;
-    width
-
+    width: 90%;
+    height: auto;
+  }
+}
 
 </style>
 
