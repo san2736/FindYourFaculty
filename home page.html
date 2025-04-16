@@ -182,6 +182,135 @@ button[type="submit"]:hover {
     background-color: #0056b3;
 }
 
+@media (max-width: 768px) {
+  body {
+    margin: 0;
+    background-image: url("mpstme dark bg.jpeg");
+    opacity: 1;
+  }
+
+  /* Navbar styling */
+  .nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .nav-container img {
+    height: 80px; /* Reduced size for smaller screens */
+    width: auto;
+  }
+
+  ul {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    list-style-type: none;
+    background-color: rgb(179, 179, 179);
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Center the items */
+    align-items: center;
+    height: 70px; /* Reduced height */
+  }
+
+  li {
+    font-size: large;
+    margin: 0 15px;
+  }
+
+  a {
+    color: black;
+    text-decoration: none;
+    padding: 0 15px;
+    display: inline-block;
+    text-align: center;
+    line-height: 70px; /* Adjusted for smaller navbar height */
+  }
+
+  a:hover {
+    background-color: rgb(122, 122, 122);
+  }
+
+  /* Image adjustments */
+  .girl_thinking img {
+    height: 300px; /* Reduced height for mobile view */
+    margin-top: 20px;
+    margin-right: 30px;
+  }
+
+  .fyf img {
+    margin-top: 200px;
+    height: 150px; /* Adjusted image size */
+    margin-left: 30px;
+  }
+
+  /* Search bar adjustments */
+  .searchbar {
+    padding: 10px;
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  .search-form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .searchbar input {
+    width: 70%;
+    padding: 8px;
+    font-size: large;
+    font-family: 'Times New Roman', Times, serif;
+    border: 3px solid rgb(0, 17, 115);
+    border-radius: 10px;
+  }
+
+  button[type="submit"] {
+    padding: 8px 16px;
+    font-size: 14px; /* Adjusted size for mobile */
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+
+  /* Autocomplete box adjustments */
+  .autocomplete-items {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    border: 1px solid #ccc;
+    max-height: 150px;
+    overflow-y: auto;
+    background-color: white;
+    z-index: 1000;
+    width: 70%; /* Adjust width */
+  }
+
+  .autocomplete-items div {
+    padding: 8px;
+    cursor: pointer;
+  }
+
+  .autocomplete-items div:hover {
+    background-color: #f0f0f0;
+  }
+}
 
 
 </style>
