@@ -182,62 +182,61 @@ button[type="submit"]:hover {
     background-color: #0056b3;
 }
 @media (max-width: 768px) {
-  /* Adjust Navbar for mobile */
+  /* Fix Navbar for mobile - make sure all items fit in one row */
   .nav {
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 100%;
-    padding: 10px 0;
-    font-size: large;
-  }
-
-  .nav-container {
-    width: 100%;
     display: flex;
-    justify-content: flex-start; /* Align the logo on the left */
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
     padding: 10px 20px;
   }
 
+  .nav-container {
+    display: flex;
+    justify-content: flex-start; /* Align logo to the left */
+    width: 100%;
+  }
+
   .nav-container img {
-    height: 50px; /* Smaller logo for mobile */
+    height: 50px; /* Smaller logo */
     margin-right: 10px;
   }
 
   .nav ul {
     display: flex;
-    justify-content: space-evenly;
-    width: auto;
-    padding-left: 0;
+    width: 100%;
+    padding: 0;
     margin: 0;
+    justify-content: space-evenly; /* Evenly distribute navbar items */
   }
 
   .nav li {
-    margin: 0 10px;
-    font-size: large;
+    margin: 0 5px;
   }
 
   .nav a {
     line-height: 50px;
     font-size: 14px; /* Smaller font size */
-    padding: 10px 15px;
+    padding: 10px;
+    text-align: center;
+    display: block;
   }
 
-  /* Make the search bar and button fit in one horizontal line */
+  /* Search bar */
   .searchbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-left: 75px;
     margin-top: 20px;
     width: 100%;
-    max-width: 650px; /* Limit width on mobile */
+    max-width: 650px; /* Limit max width */
+    margin-left: 75px;
   }
 
   .searchbar input {
-    width: 75%; /* Make the input smaller */
+    width: 75%; /* Reduced width for mobile */
     height: 40px;
-    font-size: large;
+    font-size: 16px;
     padding: 5px;
     border-radius: 10px;
     border: 3px solid rgb(0, 17, 115);
@@ -245,9 +244,9 @@ button[type="submit"]:hover {
 
   .search-form {
     display: flex;
-    width: 100%;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
   }
 
   button[type="submit"] {
@@ -276,7 +275,6 @@ button[type="submit"]:hover {
     display: block;
   }
 }
-
 
     
 </style>
