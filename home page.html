@@ -181,72 +181,97 @@ button[type="submit"] {
 button[type="submit"]:hover {
     background-color: #0056b3;
 }
-@media (max-width: 768px) {
-
-    .nav-container img {
-        height: 70px;
-        margin-right: 5px;
-    }
-
-    .nav ul {
+/* Mobile Responsive Styles */
+@media only screen and (max-width: 768px) {
+    /* Navbar adjustments */
+    .nav {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .nav ul {
+        padding-left: 0;
+        flex-direction: column;
         height: auto;
-        padding-left: 20px;
-        background-color: rgba(179, 179, 179, 0.95);
+        width: 100%;
     }
-
-    .nav ul li {
-        margin: 10px 0;
-        font-size: large;
+    
+    .nav li {
+        float: none;
+        margin: 0;
+        width: 100%;
+        text-align: center;
+        height: auto;
     }
-
-    .nav ul a {
+    
+    .nav a {
+        padding: 10px 0;
         line-height: normal;
+        display: block;
+    }
+    
+    .nav-container {
+        justify-content: center;
         padding: 10px 0;
     }
-
+    
+    /* Image adjustments */
     .girl_thinking img {
         height: 250px;
         margin: 50px auto 0;
         display: block;
+        float: none;
     }
-
+    
     .fyf img {
+        margin: 30px auto 0;
         height: 120px;
-        margin: 30px auto;
         display: block;
+        float: none;
     }
-
+    
+    /* Search bar adjustments */
     .searchbar {
         justify-content: center;
-        margin-top: 30px;
+        margin: 20px 10px;
     }
-
-    .searchbar input {
-        width: 90%;
-        margin: 0 auto;
-        font-size: medium;
-    }
-
+    
     .search-form {
+        width: 90%;
         flex-direction: column;
-        gap: 15px;
+    }
+    
+    .searchbar input {
         width: 100%;
-        padding: 0 10px;
+        margin-left: 0;
+        box-sizing: border-box;
     }
-
+    
     button[type="submit"] {
-        width: 90%;
-        font-size: medium;
+        width: 100%;
     }
-
+    
+    /* Autocomplete adjustments */
     .autocomplete-items {
-        width: 90%;
-        left: 5%;
+        width: calc(100% - 20px);
     }
 }
 
+/* For very small screens */
+@media only screen and (max-width: 480px) {
+    .girl_thinking img {
+        height: 200px;
+    }
+    
+    .fyf img {
+        height: 100px;
+    }
+    
+    .nav li {
+        font-size: large;
+    }
+}
 
 </style>
 
