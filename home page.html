@@ -181,74 +181,72 @@ button[type="submit"] {
 button[type="submit"]:hover {
     background-color: #0056b3;
 }
-@media (max-width: 600px) {
+@media (max-width: 768px) {
 
-  /* ✅ Make navbar scrollable horizontally on phones */
-  nav ul {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    white-space: nowrap;
-    scrollbar-width: thin;
-    -ms-overflow-style: auto;
-  }
+    .nav-container img {
+        height: 70px;
+        margin-right: 5px;
+    }
 
-  nav ul::-webkit-scrollbar {
-    height: 6px;
-  }
+    .nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        padding-left: 20px;
+        background-color: rgba(179, 179, 179, 0.95);
+    }
 
-  nav ul::-webkit-scrollbar-thumb {
-    background: #888; 
-    border-radius: 4px;
-  }
+    .nav ul li {
+        margin: 10px 0;
+        font-size: large;
+    }
 
-  nav li {
-    flex: 0 0 auto;
-    margin: 0 20px;
-    font-size: large;
-  }
+    .nav ul a {
+        line-height: normal;
+        padding: 10px 0;
+    }
 
-  .nav-container img {
-    height: 70px;
-    margin-left: 10px;
-  }
+    .girl_thinking img {
+        height: 250px;
+        margin: 50px auto 0;
+        display: block;
+    }
 
-  /* ✅ Search bar adjustments for small screens */
-  .search-form {
-    flex-direction: column;
-    align-items: stretch;
-    width: 100%;
-    padding: 0 10px;
-  }
+    .fyf img {
+        height: 120px;
+        margin: 30px auto;
+        display: block;
+    }
 
-  .searchbar input {
-    width: 100%;
-    margin-left: 0;
-  }
+    .searchbar {
+        justify-content: center;
+        margin-top: 30px;
+    }
 
-  button[type="submit"] {
-    width: 100%;
-  }
+    .searchbar input {
+        width: 90%;
+        margin: 0 auto;
+        font-size: medium;
+    }
 
-  .autocomplete-items {
-    width: 100%;
-  }
+    .search-form {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+        padding: 0 10px;
+    }
 
-  /* ✅ Keep girl image visible but adjust layout */
-  .girl_thinking img {
-    height: auto;
-    width: 100%;
-    max-width: 400px;
-    margin: 20px auto;
-    display: block;
-  }
+    button[type="submit"] {
+        width: 90%;
+        font-size: medium;
+    }
 
-  .fyf img {
-    margin: 20px auto;
-    display: block;
-    width: 90%;
-    height: auto;
-  }
+    .autocomplete-items {
+        width: 90%;
+        left: 5%;
+    }
 }
+
 
 </style>
 
