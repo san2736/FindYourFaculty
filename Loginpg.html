@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      height: 100vh;
+      background: url('C:/Users/Admin/Downloads/tech proj home pg/login-img/homepage-mpstme-final - Trim.mp4') repeat center center fixed;
+      background-size: cover;
+    }
+
+    .login-container {
+      width: 300px;
+      background-color: white;
+      border-radius: 1px;
+      height: 75vh;
+      border: 2px solid black; 
+      box-shadow: 3 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: center;
+      margin: 20px;
+    }
+
+    .login-container img {
+      width: 200px;
+      margin-right: 12px;
+      margin-bottom: 10px;
+    }
+
+    .login-container h1 {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    .input-group {
+      width: 6cm;
+      height: 0.6cm;
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 14px;
+      padding: 10px;
+      border-color: #000000;
+    }
+
+    .input-group input {
+      border: none;
+      outline: none;
+      flex: 1;
+      padding: 5px;
+    }
+
+    .input-group img {
+      width: 48px;
+      margin-right: 10px;
+    }
+
+    .login-container .checkbox {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .login-container .checkbox input {
+      margin-right: 5px;
+    }
+
+    .login-container button {
+      width: 60%;
+      background-color: #ec0c1f;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .login-container button:hover {
+      background-color: #d62839;
+      transform: scale(1.1);
+    }
+
+    .login-container a {
+      text-decoration: none;
+      color: #007BFF;
+      display: block;
+      margin-top: 10px;
+    }
+
+    .support {
+      margin-top: 20px;
+      font-size: 12px;
+      color: #555;
+    }
+
+    .support span {
+      font-weight: bold;
+    }
+
+    .input-group input[type="password"] {
+      width: 100%; 
+      opacity: 1; 
+      pointer-events: auto; 
+      -webkit-text-security: disc; 
+    }
+
+    .input-group.show-password input[type="password"] {
+      -webkit-text-security: none; 
+    }
+
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .back-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1; 
+    }
+
+    .login-container {
+      position: absolute; 
+      top: 50%;
+      left: 85%;
+      transform: translate(-50%, -50%); 
+      width: 290px;
+      background-color: white;
+      border-radius: 3px;
+      height: 75vh;
+      padding: 20px;
+      text-align: center;
+      z-index: 1; 
+    }
+
+    @media(max-aspect-ratio:16/9){
+      .back-video{
+        width: auto;
+        height: 100%;
+      }
+    }
+  </style>
+</head>
+
+<!-- Firebase SDKs (modular import version) -->
+<script type="module">
+  // Import necessary Firebase modules
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+  import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+
+  // Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyDmoHprs-AK3cAtBqyK3m2sywOapW_-Q0M",
+    authDomain: "login-fyf.firebaseapp.com",
+    projectId: "login-fyf",
+    storageBucket: "login-fyf.appspot.com",
+    messagingSenderId: "523153960644",
+    appId: "1:523153960644:web:3f5ce2a1cf1b10becb6391"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+
+  // Login event listener
+  document.getElementById('loginButton').addEventListener('click', async (event) => {
+    event.preventDefault();
+
+    const sapId = document.querySelector('input[type="text"]').value.trim();
+    const password = document.getElementById('passwordInput').value.trim();
+
+    if (!sapId || !/^\d{11}$/.test(sapId)) {
+      alert('Please enter a valid 11-digit SAP-ID.');
+      return;
+    }
+    if (!password || password.length < 6) {
+      alert('Password must be at least 6 characters.');
+      return;
+    }
+
+    try {
+      const email = `${sapId}@college.edu`;  // Convert SAP-ID to email format
+      const userCredential = await signInWithEmailAndPassword(auth, email, password);
+
+      alert("Login Successful!");
+      window.location.href = "home page.html";  // Redirect to homepage
+    } catch (error) {
+      alert(`Login failed: ${error.message}`);
+    }
+  });
+</script>
+
+<body>
+  <div class="hero">
+    <video autoplay loop muted play-inline class="back-video">
+      <source src="homepage-mpstme-final - Trim.mp4">
+    </video>
+  </div>
+
+  <div class="login-container">
+    <img src="nmims-logo.png" alt="NMIMS Logo" style="margin-right: 10%;">
+    <h1 style="margin-right: 10%;">SVKM'S NMIMS<br>Deemed to be UNIVERSITY</h1>
+
+    <div class="input-group">
+      <img src="people.png" alt="Sap-id Icon"> 
+      <input type="text" placeholder="Sap-id">
+    </div>
+
+    <div class="input-group">
+      <img src="image-removebg-preview.png" alt="Password Icon"> 
+      <input type="password" id="passwordInput" placeholder="Password">
+    </div>
+
+    <div class="checkbox">
+      <input type="checkbox" id="showPassword">
+      <label for="showPassword">Show password</label>
+    </div>
+
+    <button id="loginButton">Log in</button>
+
+    <a href="forgot pass.html" style="margin-right: 10%;">Forgot Password?</a>
+
+    <div class="support" style="margin-right: 10%;">
+      For any support queries 
+      please <br><br> contact us at: 
+      <span>987-654-343</span>
+    </div>
+  </div>
+
+  <!-- Show Password Script -->
+  <script>
+    document.getElementById('showPassword').addEventListener('change', function () {
+      const passwordInput = document.getElementById('passwordInput');
+      passwordInput.type = this.checked ? 'text' : 'password';
+    });
+  </script>
+</body>
+</html>

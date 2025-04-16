@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="home page_css.css">
+</head>
+<script>
+    
+
+</script>
+<body>
+
+    <!--nav bar-->
+    <nav class="nav">
+        <div class="nav-container">
+        <img src="logo.png" alt="logo" style="float: left;">
+    </div>
+    <ul>
+        <li><a href="home page.html">Home</a></li>
+        <li><a href="about us.html">About Us</a></li>
+        <li><a href="contact us.html">Contact Us</a></li>
+        <li><a href="Loginpg.html">Log Out</a></li>
+    </ul>
+    </nav>
+
+    <!-- girl thinking img -->
+    <div class="girl_thinking">
+        <img align="right" src="girl thinking.png" alt="girl thinking">
+    </div>
+
+    <!-- find your faculty text img -->
+    <div class="fyf">
+        <img align="bottom" src="fyf text.png" alt="fyf text">
+    </div>
+
+    <!--search bar-->
+    <div class="searchbar">
+        <form id="searchForm" autocomplete="off" class="search-form">
+
+            <input type="text" id="facultyInput" name="faculty" placeholder="🔍 Enter Faculty Name..." required>
+            <div id="suggestions" class="suggestions-box"></div>
+            <button type="submit">Search</button>
+        </form>
+    </div>
+
+    <!-- Add this before </body> -->
+<script>
+    function autocomplete(inp, arr) 
+    {
+    var currentFocus;
+    inp.addEventListener("input", function(e) {
+      var a, b, i, val = this.value;
+      closeAllLists();
+      if (!val) { return false;}
+      currentFocus = -1;
+      a = document.createElement("DIV");
+      a.setAttribute("id", this.id + "autocomplete-list");
+      a.setAttribute("class", "autocomplete-items");
+      this.parentNode.appendChild(a);
+      for (i = 0; i < arr.length; i++) {
+        var originalName = arr[i];
+        let nameToMatch = originalName.replace(/^(Prof\.|Dr\.)\s*/i, "");
+
+        if (
+  nameToMatch.toLowerCase().includes(val.toLowerCase()) ||
+  originalName.toLowerCase().includes(val.toLowerCase())
+)
+
+        {
+          b = document.createElement("DIV");
+          b.textContent = arr[i];
+          b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+          b.addEventListener("click", function(e) {
+              inp.value = this.getElementsByTagName("input")[0].value;
+              closeAllLists();
+          });
+          a.appendChild(b);
+        }
+      }
+  });
+  function closeAllLists(elmnt) 
+  {
+    var x = document.getElementsByClassName("autocomplete-items");
+    for (var i = 0; i < x.length; i++) {
+      if (elmnt != x[i] && elmnt != inp) {
+        x[i].parentNode.removeChild(x[i]);
+      }
+    }
+  }
+  document.addEventListener("click", function (e) {
+      closeAllLists(e.target);
+  });
+}
+
+var facultyNames= {
+    "Prof. Ratnesh Chaturvedi": "402.html",
+    "Prof. Jesleena Gonsalves ": "402.html",
+    "Prof. Mohini Reddy": "402.html",
+    "Prof. Abhishek Vichare": "402.html",
+    "Prof. Khushbu Chauhan": "402.html",
+    "Prof. Mahesh Mali": "402.html",
+    "Prof. Hiral Modi": "402.html",
+    "Prof. Avani Bhuva": "402.html",
+    "Prof. Abhay Kolhe": "402.html",
+    "Prof. Manisha Tiwari": "402.html",
+    "Prof. Ishani Saha": "402.html",
+    "Dr. Poulami Das": "402.html",
+    "Prof. Payal Mishra": "402.html",
+    "Prof. Pragati Khare": "402.html",
+    "Prof Archana Nanade": "402.html"
+};
+
+
+autocomplete(document.getElementById("facultyInput"), Object.keys(facultyNames));
+
+
+    document.getElementById("searchForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+    const input = document.getElementById("facultyInput").value.trim();
+    const layout = facultyNames[input];
+
+    if (layout) {
+        const encodedName = encodeURIComponent(input);
+        window.location.href = `facultyareas/${layout}?faculty=${encodedName}`;
+    } else {
+        alert("Faculty not found. Please check the name.");
+    }
+});
+
+
+</script>
+
+
+
+<style>
+.autocomplete-items {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    border: 1px solid #ccc;
+    max-height: 150px;
+    overflow-y: auto;
+    background-color: white;
+    z-index: 1000;
+    width: 100%;
+}
+
+
+.autocomplete-items div {
+    padding: 8px;
+    cursor: pointer;
+}
+
+.suggestion-item div:hover {
+    background-color: #f0f0f0;
+}
+.searchbar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 20px; 
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+}
+
+button[type="submit"] {
+    padding: 8px 16px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+</style>
+
+</body>
+</html>
