@@ -159,23 +159,26 @@
       }
     }
 @media (max-width: 768px) {
-  body {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
     overflow: hidden;
   }
 
   .hero {
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
   }
 
   .back-video {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    width: 100vw;
-    height: 100vh;
   }
 
   .login-container {
@@ -183,12 +186,14 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 90%;
+    width: 85%;
     max-width: 320px;
     height: auto;
-    margin: 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    z-index: 2;
+    padding: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.95); /* slightly transparent white */
+    border-radius: 8px;
+    z-index: 1;
   }
 }
 
