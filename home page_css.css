@@ -82,33 +82,39 @@ body{
         overflow-x: hidden;
     }
 
-    /* Nav bar fix */
-    .nav {
-        width: 100%;
+    /* Make full navbar scrollable horizontally */
+    .nav-container {
         overflow-x: auto;
         white-space: nowrap;
-        margin: 0;
-        padding: 0;
+        background-color: #f0f0f0; /* Or your navbar's grey */
+        padding: 10px 0;
     }
 
-    .nav ul {
+    .nav {
         display: flex;
         flex-direction: row;
-        justify-content: flex-start;
-        padding: 0;
-        margin: 0;
         width: max-content;
+        margin: 0;
+        padding: 0 10px;
     }
 
     .nav li {
-        font-size: large;
+        list-style: none;
         margin: 0 10px;
         flex: 0 0 auto;
     }
 
     .nav a {
         font-size: large;
+        text-decoration: none;
         padding: 10px;
+        display: inline-block;
+        color: #000;
+    }
+
+    /* Add this to ensure "Home" is visible */
+    .nav li:first-child {
+        margin-left: 10px;
     }
 
     /* Logo */
