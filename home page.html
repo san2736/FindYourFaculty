@@ -183,42 +183,31 @@ button[type="submit"]:hover {
 }
 /* Mobile Responsive Styles */
 @media only screen and (max-width: 768px) {
-    /* Navbar adjustments */
-    .nav {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-    
+    /* Navbar adjustments - keep horizontal but more compact */
     .nav ul {
-        padding-left: 0;
-        flex-direction: column;
-        height: auto;
-        width: 100%;
+        padding-left: 10px;
+        height: 60px; /* Reduced height */
+        flex-wrap: wrap; /* Allow items to wrap if needed */
     }
     
     .nav li {
-        float: none;
-        margin: 0;
-        width: 100%;
-        text-align: center;
-        height: auto;
+        margin: 0 10px; /* Reduced margin */
+        font-size: large; /* Smaller font */
+        height: 60px; /* Match nav height */
     }
     
     .nav a {
-        padding: 10px 0;
-        line-height: normal;
-        display: block;
+        line-height: 60px; /* Match nav height */
+        padding: 0 8px; /* Reduced padding */
     }
     
-    .nav-container {
-        justify-content: center;
-        padding: 10px 0;
+    .nav-container img {
+        height: 70px; /* Smaller logo */
     }
     
     /* Image adjustments */
     .girl_thinking img {
-        height: 250px;
+        height: 200px;
         margin: 50px auto 0;
         display: block;
         float: none;
@@ -226,12 +215,12 @@ button[type="submit"]:hover {
     
     .fyf img {
         margin: 30px auto 0;
-        height: 120px;
+        height: 100px;
         display: block;
         float: none;
     }
     
-    /* Search bar adjustments */
+    /* Search bar adjustments - keep in one line */
     .searchbar {
         justify-content: center;
         margin: 20px 10px;
@@ -239,37 +228,65 @@ button[type="submit"]:hover {
     
     .search-form {
         width: 90%;
-        flex-direction: column;
+        display: flex;
+        flex-direction: row; /* Keep search and button in one line */
     }
     
     .searchbar input {
-        width: 100%;
+        width: 70%; /* Give more space to input */
         margin-left: 0;
         box-sizing: border-box;
+        flex-grow: 1; /* Allow input to grow */
     }
     
     button[type="submit"] {
-        width: 100%;
+        width: auto; /* Auto width for button */
+        padding: 8px 12px; /* Adjusted padding */
+        white-space: nowrap; /* Prevent button text from wrapping */
     }
     
     /* Autocomplete adjustments */
     .autocomplete-items {
-        width: calc(100% - 20px);
+        width: calc(70% - 2px); /* Match input width */
     }
 }
 
-/* For very small screens */
+/* For very small screens (below 480px) */
 @media only screen and (max-width: 480px) {
-    .girl_thinking img {
-        height: 200px;
-    }
-    
-    .fyf img {
-        height: 100px;
+    .nav ul {
+        height: 50px;
     }
     
     .nav li {
-        font-size: large;
+        font-size: medium;
+        margin: 0 5px;
+        height: 50px;
+    }
+    
+    .nav a {
+        line-height: 50px;
+        padding: 0 5px;
+    }
+    
+    .girl_thinking img {
+        height: 150px;
+    }
+    
+    .fyf img {
+        height: 80px;
+    }
+    
+    .search-form {
+        width: 95%;
+    }
+    
+    .searchbar input {
+        font-size: medium; /* Slightly smaller font */
+    }
+    
+    button[type="submit"] {
+        padding: 6px 10px;
+        font-size: medium;
     }
 }
 
