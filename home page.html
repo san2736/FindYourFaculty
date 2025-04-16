@@ -182,53 +182,56 @@ button[type="submit"]:hover {
     background-color: #0056b3;
 }
 @media screen and (max-width: 768px) {
+
     /* NAVBAR */
     .nav {
         flex-direction: row;
-        flex-wrap: wrap;
+        align-items: center;
         justify-content: space-between;
         padding: 0 10px;
     }
 
+    .nav-container {
+        padding: 0;
+    }
+
     .nav-container img {
         height: 60px;
-        margin-left: 5px;
+        margin: 5px 0;
     }
 
     .nav ul {
         display: flex;
         flex-direction: row;
-        justify-content: flex-end;
         align-items: center;
+        justify-content: flex-end;
         flex-wrap: wrap;
-        padding-left: 0;
+        list-style: none;
         margin: 0;
-        height: auto;
-        overflow-x: auto;
-        white-space: nowrap;
+        padding: 0;
         background-color: rgb(179, 179, 179);
         width: 100%;
     }
 
     .nav li {
-        font-size: medium;
-        margin: 0 8px;
-        height: auto;
+        margin: 0 10px;
+        font-size: 16px;
     }
 
     .nav a {
+        padding: 0 10px;
         font-size: 14px;
         line-height: 60px;
-        padding: 0 10px;
     }
 
-    /* IMAGES */
+    /* GIRL IMAGE */
     .girl_thinking img {
         height: 200px;
         margin: 20px auto;
         display: block;
     }
 
+    /* FYF TEXT */
     .fyf img {
         height: 100px;
         margin: 20px auto;
@@ -238,41 +241,42 @@ button[type="submit"]:hover {
     /* SEARCH BAR */
     .searchbar {
         justify-content: center;
-        margin: 20px 0;
+        margin: 20px auto;
+        width: 90%;
     }
 
     .search-form {
         flex-direction: column;
         align-items: stretch;
-        width: 90%;
-        margin: 0 auto;
+        width: 100%;
     }
 
     .searchbar input {
         width: 100%;
-        margin-left: 0;
+        margin: 0;
         font-size: 16px;
+        padding: 10px;
     }
 
     button[type="submit"] {
         width: 100%;
-        font-size: 16px;
         margin-top: 10px;
+        font-size: 16px;
     }
 
-    /* AUTOCOMPLETE BOX */
+    /* AUTOCOMPLETE */
     .autocomplete-items {
         width: 100%;
         font-size: 14px;
     }
 
-    /* BACKGROUND */
+    /* PAGE BACKGROUND */
     body {
         background-size: cover;
         background-position: center;
+        background-repeat: no-repeat;
     }
 }
-
 
 </style>
 
