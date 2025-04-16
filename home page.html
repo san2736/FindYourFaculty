@@ -187,30 +187,17 @@ button[type="submit"]:hover {
     background-size: cover;
     background-position: center;
   }
+  /* Make nav scrollable and readable on mobile */
+@media screen and (max-width: 768px) {
   .nav {
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-    background-color: rgba(255, 255, 255, 0.95);
     overflow-x: auto;
-  }
-
-  .nav-container {
-    flex: 0 0 auto;
-    padding-left: 10px;
-    margin-right: 10px;
-  }
-
-  .nav-container img {
-    height: 60px;
-    width: auto;
+    white-space: nowrap;
+    background-color: rgba(255, 255, 255, 0.95); /* Light background for contrast */
   }
 
   .nav ul {
-    display: flex;
     flex-wrap: nowrap;
     padding-left: 0;
-    margin: 0;
   }
 
   .nav li {
@@ -220,7 +207,7 @@ button[type="submit"]:hover {
   }
 
   .nav li a {
-    color: black !important;
+    color: black !important; /* Override any hidden/dark colors */
     display: inline-block;
     padding: 15px 10px;
     text-decoration: none;
