@@ -193,43 +193,49 @@ button[type="submit"]:hover {
   /* Navbar container */
   .nav {
     flex-direction: column;
-    align-items: stretch;
+    align-items: center;
     padding: 0;
-    background-color: white;
+    background-color: transparent;
   }
 
   .nav-container {
+    display: flex;
     justify-content: center;
-    margin: 0 auto;
     padding: 10px 0;
+    background: none; /* No background for logo container */
   }
 
   .nav-container img {
-    height: 60px;
+    height: 45px;  /* Smaller logo */
     width: auto;
+    background: none;
   }
 
-  /* Navbar links */
+  /* Scrollable navbar */
   .nav ul {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    white-space: nowrap;
+    width: 100%;
+    justify-content: space-around;
     background-color: rgb(179, 179, 179);
-    padding: 0;
+    margin: 0;
+    padding: 10px 0;
   }
 
   .nav li {
-    margin: 10px 0;
-    height: auto;
+    display: inline-block;
+    margin: 0 10px;
+    flex: 0 0 auto;
   }
 
   .nav a {
-    font-size: 18px;
-    line-height: normal;
-    padding: 10px 20px;
+    font-size: 16px;
+    padding: 10px;
     display: block;
-    width: 100%;
     text-align: center;
+    white-space: nowrap;
   }
 
   /* Images */
@@ -241,7 +247,7 @@ button[type="submit"]:hover {
     margin: 20px auto;
   }
 
-  /* Search bar layout */
+  /* Searchbar */
   .searchbar {
     flex-direction: column;
     align-items: center;
