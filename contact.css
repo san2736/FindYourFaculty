@@ -119,41 +119,42 @@ button:hover {
 }
 @media (max-width: 768px) {
     .nav {
-        flex-direction: column;
-        align-items: center;
-        height: auto;
+        display: block; /* Remove flex layout on nav */
+        text-align: center;
     }
 
     .nav-container {
-        justify-content: center;
+        display: block;
+        text-align: center;
         padding: 10px 0;
+        height: auto;
     }
 
     .nav-container img {
         height: 80px;
-        margin: 10px 0;
+        margin: 10px auto;
+        display: block;
     }
 
     .nav ul {
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
+        display: block;
         padding-left: 0;
+        margin: 0;
         background-color: rgb(179, 179, 179);
     }
 
     .nav li {
-        margin: 0;
         width: 100%;
-        text-align: center;
+        margin: 0;
     }
 
     .nav a {
         display: block;
-        width: 100%;
         padding: 15px 0;
-        line-height: normal;
+        width: 100%;
+        font-size: large;
         border-top: 1px solid #aaa;
+        line-height: normal;
     }
 
     .nav a:hover {
