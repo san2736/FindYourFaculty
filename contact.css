@@ -119,36 +119,44 @@ button:hover {
 }
 
 @media only screen and (max-width: 768px) {
+    /* Navbar container */
     .nav {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        padding: 10px 0 !important;
-        height: auto !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+        width: 100%;
     }
 
+    /* Navbar list */
     .nav ul {
-        list-style-type: none !important;
-        margin: 0 !important;
-        padding: 0 !important;
-        display: flex !important;
-        flex-direction: column !important;
-        width: 100% !important;
-        gap: 10px !important;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        width: 100%;
+        gap: 10px;
     }
 
+    /* Navbar links */
     .nav a {
-        color: black !important; /* Ensure text color is visible */
-        text-decoration: none !important;
-        font-size: 18px !important;
-        padding: 10px 0 !important;
-        width: 100% !important;
-        text-align: center !important;
+        color: black;
+        text-decoration: none;
+        font-size: 18px;
+        padding: 10px 0;
+        width: 100%;
+        text-align: center; /* Center align text */
     }
 
+    .nav a:hover {
+        background-color: rgb(122, 122, 122);
+    }
+
+    /* Adjust logo size */
     .nav-container img {
-        height: 50px !important;
-        width: auto !important;
-        margin-bottom: 10px !important;
+        height: 50px; /* Adjust for mobile */
+        width: auto;
+        margin-bottom: 10px;
     }
 }
