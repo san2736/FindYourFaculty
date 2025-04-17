@@ -239,9 +239,10 @@ button[type="submit"]:hover {
     .searchbar {
         display: flex;
         flex-direction: row; /* Side by side */
-        justify-content: center;
+        justify-content: flex-start; /* Align to left */
         align-items: center;
         margin: 20px 10px;
+        width: 100%; /* Make sure it takes the full width */
     }
 
     .search-form {
@@ -249,12 +250,12 @@ button[type="submit"]:hover {
         flex-direction: row; /* Ensure input and button are side by side */
         gap: 10px;
         width: 100%;
-        padding: 0 10px;
     }
 
     .searchbar input {
-        flex: 1;
+        flex-grow: 1; /* Allow the input to take as much space as possible */
         font-size: 16px;
+        padding: 10px;
     }
 
     button[type="submit"] {
@@ -298,7 +299,6 @@ button[type="submit"]:hover {
         margin: 20px auto;
     }
 }
-
 
 
 </style>
