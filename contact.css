@@ -119,7 +119,6 @@ button:hover {
 }
 
 @media only screen and (max-width: 768px) {
-    /* Mobile view - Navbar */
     .nav {
         display: flex;
         flex-direction: column; /* Stack logo and links */
@@ -153,4 +152,3 @@ button:hover {
         margin-bottom: 10px;
     }
 }
-
