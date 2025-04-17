@@ -78,3 +78,54 @@ body {
     font-size: 18px;
     line-height: 1.6;
 }
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: row; /* Horizontal layout */
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        background-color: rgb(179, 179, 179);
+    }
+    .nav ul {
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto; /* Scroll if needed */
+        white-space: nowrap;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .nav li {
+        display: inline-block;
+        margin: 0 10px;
+        flex: 0 0 auto;
+    }
+
+    .nav a {
+        font-size: 16px;
+        padding: 10px;
+        display: block;
+        text-align: center;
+        white-space: nowrap;
+    }
+    
+
+    /* Rest of the mobile-specific card styles */
+    .card {
+        margin: 40px 20px;
+        padding: 20px;
+    }
+
+    .card h1 {
+        font-size: 28px;
+    }
+
+    .card p {
+        font-size: 16px;
+    }
+
+    label, input, textarea, button {
+        font-size: 14px;
+    }
+}
