@@ -121,6 +121,7 @@ button:hover {
     .nav {
         flex-direction: column;
         align-items: center;
+        height: auto;
     }
 
     .nav-container {
@@ -128,12 +129,17 @@ button:hover {
         padding: 10px 0;
     }
 
+    .nav-container img {
+        height: 80px;
+        margin: 10px 0;
+    }
+
     .nav ul {
         flex-direction: column;
         align-items: center;
+        width: 100%;
         padding-left: 0;
         background-color: rgb(179, 179, 179);
-        width: 100%;
     }
 
     .nav li {
@@ -152,10 +158,5 @@ button:hover {
 
     .nav a:hover {
         background-color: rgb(122, 122, 122);
-    }
-
-    .nav-container img {
-        height: 80px;
-        margin: 10px 0;
     }
 }
