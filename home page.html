@@ -236,28 +236,36 @@ button[type="submit"]:hover {
     }
 
     /* Adjust the searchbar */
-    .searchbar {
+   .searchbar {
         display: flex;
-        align-items: center;
-        margin: 20px 10px;
+        justify-content: flex-start;
+        padding: 10px;
         width: 100%;
-        justify-content: flex-start; /* Align left */
+        box-sizing: border-box;
     }
 
     .search-form {
         display: flex;
-        flex-direction: row; /* Side by side input and button */
-        gap: 10px;
         width: 100%;
-        padding: 0;
-        box-sizing: border-box;
+        gap: 8px;
     }
 
-    .searchbar input {
-        flex-grow: 1; /* Allow input to take available space */
-        font-size: 16px;
+    .search-form input[type="text"] {
+        flex: 1;
         padding: 10px;
-        max-width: 85%; /* Prevent overflow, keep some space for button */
+        font-size: 16px;
+        min-width: 0; /* Prevent overflow */
+    }
+
+    .search-form button[type="submit"] {
+        padding: 10px 14px;
+        font-size: 16px;
+        white-space: nowrap;
+        flex-shrink: 0;
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        border-radius: 4px;
     }
 
     button[type="submit"] {
