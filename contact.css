@@ -118,33 +118,43 @@ button:hover {
     background-color: #008ca1;
 }
 @media only screen and (max-width: 768px) {
-    .nav-container {
-        flex-direction: column;
+    .nav {
+        flex-direction: row; /* Horizontal layout */
         align-items: center;
-        height: auto;
-    }
-
-    .nav ul {
-        flex-direction: column;
-        align-items: center;
-        padding-left: 0;
-        gap: 10px;
-    }
-
-    .nav li {
-        margin: 0;
-    }
-
-    .nav a {
-        font-size: 18px;
-        padding: 10px 0;
-        width: 100%;
-        text-align: center;
+        justify-content: space-between;
+        padding: 10px;
+        background-color: rgb(179, 179, 179);
     }
 
     .nav-container img {
-        height: 60px;
-        margin-bottom: 10px;
+        height: 45px; /* Smaller logo */
+        width: auto;
+        background: none;
+    }
+
+    /* Adjust the navbar items for horizontal layout */
+    .nav ul {
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto; /* Scroll if needed */
+        white-space: nowrap;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .nav li {
+        display: inline-block;
+        margin: 0 10px;
+        flex: 0 0 auto;
+    }
+
+    .nav a {
+        font-size: 16px;
+        padding: 10px;
+        display: block;
+        text-align: center;
+        white-space: nowrap;
     }
 
     .card {
