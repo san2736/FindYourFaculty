@@ -118,4 +118,69 @@ button:hover {
     background-color: #008ca1;
 }
 
+/* Mobile Styles */
+@media only screen and (max-width: 768px) {
+    /* Navbar - stack items vertically */
+    .nav {
+        display: flex;
+        flex-direction: column; /* Stack navbar items vertically */
+        align-items: center;
+        padding: 10px 0;
+        height: auto;
+    }
+
+    .nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column; /* Stack the items vertically */
+        width: 100%; /* Full width for the links */
+        gap: 10px;
+    }
+
+    .nav a {
+        color: black;
+        text-decoration: none;
+        font-size: 18px;
+        padding: 10px 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-container img {
+        height: 50px;
+        width: auto;
+        margin-bottom: 10px;
+    }
+
+    /* Card adjustment for mobile */
+    .card {
+        margin: 50px 20px; /* Adjust margin for mobile */
+        padding: 20px; /* Adjust padding for smaller screen */
+    }
+
+    /* Form adjustments */
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    input, textarea, button {
+        font-size: 14px; /* Smaller font size for mobile */
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+
+    /* Make the button larger and adjust form fields */
+    button {
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    /* Adjusting text area */
+    textarea {
+        height: 120px;
+    }
+}
 
