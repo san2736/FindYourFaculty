@@ -183,14 +183,12 @@ button[type="submit"]:hover {
 }
 
 @media only screen and (max-width: 768px) {
-  /* Body */
   body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
   }
 
-  /* Navbar container */
   .nav {
     flex-direction: column;
     align-items: center;
@@ -202,26 +200,23 @@ button[type="submit"]:hover {
     display: flex;
     justify-content: center;
     padding: 10px 0;
-    background: none; /* No background for logo container */
+    background: none; /* Removed background */
   }
 
   .nav-container img {
-    height: 45px;  /* Smaller logo */
+    height: 45px;  /* Reduced logo size */
     width: auto;
-    background: none;
+    background: none; /* Just in case it had background */
   }
 
-  /* Scrollable navbar */
   .nav ul {
     display: flex;
     flex-direction: row;
-    overflow-x: auto;
+    overflow-x: auto; /* Make navbar scrollable if needed */
     white-space: nowrap;
     width: 100%;
     justify-content: space-around;
     background-color: rgb(179, 179, 179);
-    margin: 0;
-    padding: 10px 0;
   }
 
   .nav li {
@@ -238,7 +233,6 @@ button[type="submit"]:hover {
     white-space: nowrap;
   }
 
-  /* Images */
   .girl_thinking img,
   .fyf img {
     width: 90%;
@@ -247,7 +241,6 @@ button[type="submit"]:hover {
     margin: 20px auto;
   }
 
-  /* Searchbar */
   .searchbar {
     flex-direction: column;
     align-items: center;
@@ -273,7 +266,6 @@ button[type="submit"]:hover {
     padding: 10px;
   }
 
-  /* Autocomplete */
   .autocomplete-items {
     width: 100%;
     max-height: 150px;
