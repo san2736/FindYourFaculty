@@ -133,13 +133,6 @@ button:hover {
         padding: 10px;
         background-color: rgb(179, 179, 179);
     }
-
-    .nav-container img {
-        height: 110px; /* Keep original logo size */
-        width: auto;
-        background: none;
-    }
-
     .nav ul {
         display: flex;
         flex-direction: row;
@@ -163,6 +156,7 @@ button:hover {
         text-align: center;
         white-space: nowrap;
     }
+    
 
     /* Rest of the mobile-specific card styles */
     .card {
