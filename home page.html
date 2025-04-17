@@ -238,24 +238,26 @@ button[type="submit"]:hover {
     /* Adjust the searchbar */
     .searchbar {
         display: flex;
-        flex-direction: row; /* Side by side */
-        justify-content: flex-start; /* Align to left */
         align-items: center;
         margin: 20px 10px;
-        width: 100%; /* Make sure it takes the full width */
+        width: 100%;
+        justify-content: flex-start; /* Align left */
     }
 
     .search-form {
         display: flex;
-        flex-direction: row; /* Ensure input and button are side by side */
+        flex-direction: row; /* Side by side input and button */
         gap: 10px;
         width: 100%;
+        padding: 0;
+        box-sizing: border-box;
     }
 
     .searchbar input {
-        flex-grow: 1; /* Allow the input to take as much space as possible */
+        flex-grow: 1; /* Allow input to take available space */
         font-size: 16px;
         padding: 10px;
+        max-width: 85%; /* Prevent overflow, keep some space for button */
     }
 
     button[type="submit"] {
@@ -268,6 +270,7 @@ button[type="submit"]:hover {
         border-radius: 4px;
         cursor: pointer;
         transition: background-color 0.3s ease;
+        white-space: nowrap;
     }
 
     button[type="submit"]:hover {
@@ -299,6 +302,7 @@ button[type="submit"]:hover {
         margin: 20px auto;
     }
 }
+
 
 
 </style>
