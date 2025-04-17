@@ -119,27 +119,24 @@ button:hover {
 }
 
 @media only screen and (max-width: 768px) {
-    /* Navbar container */
     .nav {
         display: flex;
-        flex-direction: column;
+        flex-direction: column; /* Stack navbar items vertically */
         align-items: center;
-        width: 100%;
         padding: 10px 0;
+        height: auto;
     }
 
-    /* Navbar links container */
     .nav ul {
         list-style-type: none;
         margin: 0;
         padding: 0;
         display: flex;
-        flex-direction: column; /* Stack items vertically */
-        width: 100%;
+        flex-direction: column; /* Stack the items vertically */
+        width: 100%; /* Full width for the links */
         gap: 10px;
     }
 
-    /* Navbar link style */
     .nav a {
         color: black;
         text-decoration: none;
@@ -147,55 +144,21 @@ button:hover {
         padding: 10px 0;
         width: 100%;
         text-align: center;
-        background-color: rgb(179, 179, 179); /* Same color as the desktop version */
     }
 
-    .nav a:hover {
-        background-color: rgb(122, 122, 122);
-    }
-
-    /* Adjust logo size for mobile */
     .nav-container img {
-        height: 50px; /* Adjust logo size for mobile */
+        height: 50px;
         width: auto;
         margin-bottom: 10px;
     }
 
-    /* Optional: If you want the search bar added */
-    .searchbar {
-        display: flex;
-        justify-content: flex-start;
-        padding: 10px;
-        width: 100%;
-        box-sizing: border-box;
+    .card {
+        margin: 50px 20px; /* Adjust margin for mobile */
+        padding: 20px; /* Adjust padding for smaller screen */
     }
 
-    .search-form {
-        display: flex;
-        width: 100%;
-        gap: 8px;
-    }
-
-    .search-form input[type="text"] {
-        flex: 1;
-        padding: 10px;
-        font-size: 16px;
-        min-width: 0;
-    }
-
-    .search-form button[type="submit"] {
-        padding: 10px 14px;
-        font-size: 16px;
-        white-space: nowrap;
-        flex-shrink: 0;
-        background-color: #007BFF;
-        color: white;
-        border: none;
-        border-radius: 4px;
-    }
-
-    .search-form button[type="submit"]:hover {
-        background-color: #0056b3;
+    /* Adjust form fields for mobile */
+    input, textarea, button {
+        font-size: 14px; /* Slightly smaller font size for mobile */
     }
 }
-
