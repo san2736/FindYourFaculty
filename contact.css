@@ -117,7 +117,10 @@ button {
 button:hover {
     background-color: #008ca1;
 }
-@media only screen and (max-width: 768px) {
+/* Existing Styles — unchanged */
+
+/* ========== MOBILE RESPONSIVE NAVBAR ========== */
+@media (max-width: 768px) {
     .nav {
         flex-direction: row; /* Horizontal layout */
         align-items: center;
@@ -132,7 +135,6 @@ button:hover {
         background: none;
     }
 
-    /* Adjust the navbar items for horizontal layout */
     .nav ul {
         display: flex;
         flex-direction: row;
@@ -157,23 +159,21 @@ button:hover {
         white-space: nowrap;
     }
 
+    /* Rest of the mobile-specific card styles */
     .card {
-        margin: 40px 10px;
+        margin: 40px 20px;
         padding: 20px;
     }
 
-    input, textarea, button {
-        font-size: 14px;
-        padding: 10px;
-        margin-bottom: 15px;
+    .card h1 {
+        font-size: 28px;
     }
 
-    button {
+    .card p {
         font-size: 16px;
     }
 
-    textarea {
-        height: 120px;
+    label, input, textarea, button {
+        font-size: 14px;
     }
 }
-
