@@ -160,11 +160,23 @@ autocomplete(document.getElementById("facultyInput"), Object.keys(facultyNames))
 }
 
 .search-form {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    position: relative;
+  flex-direction: row;
+  gap: 10px;
+  width: 100%;
+  padding: 0 10px;
+  align-items: center;
 }
+.searchbar input {
+  flex: 1;
+  font-size: 16px;
+}
+
+button[type="submit"] {
+  flex-shrink: 0;
+  font-size: 16px;
+  padding: 10px 16px;
+}
+
 
 button[type="submit"] {
     padding: 8px 16px;
