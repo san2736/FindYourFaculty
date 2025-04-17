@@ -121,7 +121,7 @@ button:hover {
 @media only screen and (max-width: 768px) {
     .nav {
         display: flex !important;
-        flex-direction: column !important; 
+        flex-direction: column !important;
         align-items: center !important;
         padding: 10px 0 !important;
         height: auto !important;
@@ -138,7 +138,7 @@ button:hover {
     }
 
     .nav a {
-        color: black !important;
+        color: black !important; /* Ensure text color is visible */
         text-decoration: none !important;
         font-size: 18px !important;
         padding: 10px 0 !important;
