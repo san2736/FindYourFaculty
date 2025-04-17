@@ -122,6 +122,9 @@ button:hover {
 /* Existing Styles — unchanged */
 
 /* ========== MOBILE RESPONSIVE NAVBAR ========== */
+/* Existing Styles — unchanged */
+
+/* ========== MOBILE RESPONSIVE NAVBAR ========== */
 @media (max-width: 768px) {
     .nav {
         flex-direction: row; /* Horizontal layout */
