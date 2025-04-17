@@ -193,7 +193,10 @@ button[type="submit"] {
 button[type="submit"]:hover {
     background-color: #0056b3;
 }
-    .nav {
+   
+    /* Adjust the searchbar */
+   @media only screen and (max-width: 768px) {
+        .nav {
         flex-direction: row; /* Horizontal layout */
         align-items: center;
         justify-content: space-between;
@@ -232,8 +235,6 @@ button[type="submit"]:hover {
         white-space: nowrap;
     }
 
-    /* Adjust the searchbar */
-   @media only screen and (max-width: 768px) {
     .searchbar {
         display: flex;
         justify-content: flex-start;
