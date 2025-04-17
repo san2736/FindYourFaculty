@@ -236,7 +236,8 @@ button[type="submit"]:hover {
     }
 
     /* Adjust the searchbar */
-   .searchbar {
+   @media only screen and (max-width: 768px) {
+    .searchbar {
         display: flex;
         justify-content: flex-start;
         padding: 10px;
@@ -267,7 +268,6 @@ button[type="submit"]:hover {
         border: none;
         border-radius: 4px;
     }
-
     
     button[type="submit"]:hover {
         background-color: #0056b3;
