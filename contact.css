@@ -119,6 +119,8 @@ button:hover {
 }
 /* Existing Styles — unchanged */
 
+/* Existing Styles — unchanged */
+
 /* ========== MOBILE RESPONSIVE NAVBAR ========== */
 @media (max-width: 768px) {
     .nav {
@@ -130,7 +132,7 @@ button:hover {
     }
 
     .nav-container img {
-        height: 45px; /* Smaller logo */
+        height: 110px; /* Keep original logo size */
         width: auto;
         background: none;
     }
